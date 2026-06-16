@@ -1,190 +1,134 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Vida - Deisy Katherine Martínez Chávez</title>
+    <title>CV - Deisy Katherine Martínez Chávez</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        header {
-            text-align: center;
-            border-bottom: 3px solid #2c3e50;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #2c3e50;
-            margin: 0 0 10px 0;
-            font-size: 28px;
-        }
-        h2 {
-            color: #34495e;
-            font-size: 18px;
-            margin: 0 0 15px 0;
-            font-weight: normal;
-        }
-        h3 {
-            color: #2c3e50;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        .contact-info {
-            font-size: 14px;
-            color: #555;
-        }
-        .contact-info a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-        .job, .education {
-            margin-bottom: 20px;
-        }
-        .job-title, .edu-title {
-            font-weight: bold;
-            color: #333;
-        }
-        .company, .institution {
-            font-style: italic;
-            color: #666;
-        }
-        .date {
-            float: right;
-            color: #888;
-            font-size: 14px;
-        }
-        ul {
-            margin-top: 5px;
-            padding-left: 20px;
-        }
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-        }
-        .skill-item {
-            background-color: #fff;
-            padding: 8px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            text-align: center;
-            font-size: 14px;
-        }
-        .clear {
-            clear: both;
-        }
-        @media (max-width: 600px) {
-            .date {
-                float: none;
-                display: block;
-                margin-top: 5px;
-            }
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #2d3748; background-color: #ffffff; max-width: 780px; margin: 0 auto; padding: 40px 30px; }
+        header { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 2px solid #edf2f7; }
+        h1 { font-size: 28px; font-weight: 800; color: #1a202c; letter-spacing: -0.5px; margin-bottom: 4px; }
+        .subtitle { font-size: 16px; font-weight: 600; color: #3182ce; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+        .contact-info { font-size: 13px; color: #718096; display: flex; flex-wrap: wrap; gap: 15px; }
+        .contact-info a { color: #2b6cb0; text-decoration: none; font-weight: 500; }
+        h3 { font-size: 14px; font-weight: 700; color: #1a202c; text-transform: uppercase; letter-spacing: 1px; margin-top: 30px; margin-bottom: 15px; padding-bottom: 4px; border-bottom: 1px solid #e2e8f0; }
+        p { font-size: 14px; color: #4a5568; text-align: justify; }
+        .tech-box { background-color: #f7fafc; border: 1px solid #edf2f7; padding: 15px; border-radius: 6px; margin-top: 10px; }
+        .tech-line { font-size: 13.5px; margin-bottom: 6px; color: #4a5568; }
+        .tech-label { font-weight: 700; color: #2d3748; display: inline-block; width: 160px; }
+        .experience-item { margin-bottom: 20px; }
+        .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+        .exp-title { font-size: 15px; font-weight: 700; color: #2d3748; }
+        .exp-date { font-size: 12px; font-weight: 600; color: #3182ce; background-color: #ebf8ff; padding: 2px 8px; border-radius: 4px; }
+        .company-name { font-size: 13.5px; color: #4a5568; font-weight: 500; margin-bottom: 6px; }
+        ul { padding-left: 18px; margin-bottom: 8px; }
+        li { font-size: 13.5px; color: #4a5568; margin-bottom: 4px; }
+        .edu-flex { display: flex; justify-content: space-between; margin-bottom: 10px; }
+        .edu-text { font-size: 14px; color: #2d3748; }
+        .edu-sub { font-size: 13px; color: #718096; }
+        @media print { body { padding: 20px 10px; } .exp-date { border: 1px solid #bee3f8; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Deisy Katherine Martínez Chávez</h1>
-        <h2>Asistente Administrativa / Recepcionista</h2>
+        <div class="subtitle">Administrative Assistant / Front Desk Receptionist</div>
         <div class="contact-info">
-            Bogotá, Galerías - Colombia | Tel: +57 321 379 5430 | Email: <a href="mailto:trabajaconkathe@gmail.com">trabajaconkathe@gmail.com</a>
-            <br>
-            <strong>Disponibilidad:</strong> Híbrido / Remoto / Presencial - Medio tiempo
+            <span>📍 Bogotá, Galerías - Colombia</span>
+            <span>📞 +57 321 379 5430</span>
+            <span>✉️ <a href="mailto:trabajaconkathe@gmail.com">trabajaconkathe@gmail.com</a></span>
+            <span>⏱️ Part-Time Availability</span>
         </div>
     </header>
 
     <section>
-        <h3>Perfil Profesional</h3>
+        <h3>Professional Summary</h3>
         <p>
-            Asistente Administrativa con experiencia en gestión documental, recepción, atención al público y organización logística. Enfocada en la optimización de procesos de oficina, manejo eficiente de herramientas ofimáticas y atención telefónica. Profesional organizada, proactiva y con gran capacidad de adaptación, orientada a brindar un soporte operativo impecable sin manejo de recaudos o cajas.
+            Organized and proactive Administrative Assistant with practical experience in document control, reception workflows, customer service, and event coordination[cite: 1]. Efficient in office management, data entry, and inbound phone support[cite: 1]. Possesses high adaptability, excellent interpersonal communication, and strong attention to detail[cite: 1]. Focused on delivering flawless operational and administrative support, without cash-handling or accounting responsibilities.
         </p>
     </section>
 
     <section>
-        <h3>Experiencia Laboral</h3>
-
-        <div class="job">
-            <span class="date">Feb 2026 - Abr 2026</span>
-            <span class="job-title">Asistente Administrativa</span><br>
-            <span class="company">ASOMUDEM - Vistahermosa, Meta</span>
-            <ul>
-                <li>Gestión documental, organización de archivo físico y digital, garantizando el orden de la oficina.</li>
-                <li>Atención presencial al público y canalización de requerimientos de manera oportuna.</li>
-                <li>Apoyo en la logística de eventos y creación de material visual informativo.</li>
-            </ul>
-        </div>
-        <div class="clear"></div>
-
-        <div class="job">
-            <span class="date">2024 - 2025</span>
-            <span class="job-title">Asistente Administrativa</span><br>
-            <span class="company">Consultorio Jurídico - Vistahermosa, Meta</span>
-            <ul>
-                <li>Recepción de usuarios, registro en bases de datos y control de flujo de personas.</li>
-                <li>Manejo de correspondencia, gestión documental y conmutador telefónico.</li>
-                <li>Apoyo en tareas de digitación y soporte administrativo general a los asesores.</li>
-            </ul>
-        </div>
-        <div class="clear"></div>
-
-        <div class="job">
-            <span class="date">2023 - 2024</span>
-            <span class="job-title">Asistente de Dirección / Apoyo Operativo</span><br>
-            <span class="company">BASADO (Empresa de Marketing) - Bogotá</span>
-            <ul>
-                <li>Redacción de guiones, edición de catálogos y apoyo logístico en la producción visual de marca.</li>
-                <li>Coordinación de actividades del equipo creativo y control de agendas básicas.</li>
-            </ul>
-        </div>
-        <div class="clear"></div>
-    </section>
-
-    <section>
-        <h3>Formación Académica</h3>
-        
-        <div class="education">
-            <span class="date">2023</span>
-            <span class="edu-title">Técnica en Diseño Multimedia</span><br>
-            <span class="institution">SENA</span>
-        </div>
-
-        <div class="education">
-            <span class="date">2023</span>
-            <span class="edu-title">Bachiller Académico</span><br>
-            <span class="institution">Institución Educativa Los Centauros</span>
+        <h3>Skills & Tools</h3>
+        <div class="tech-box">
+            <div class="tech-line">
+                <span class="tech-label">Core Skills:</span>
+                <span>Document Management, Front Desk Reception, Inbound Customer Service, Data Digitization[cite: 1].</span>
+            </div>
+            <div class="tech-line">
+                <span class="tech-label">Software & Tools:</span>
+                <span>Microsoft Office (Word, Excel, PowerPoint), Digital Archiving, Basic Graphic Design Tools (Canva, Flyers)[cite: 1].</span>
+            </div>
+            <div class="tech-line">
+                <span class="tech-label">Soft Skills:</span>
+                <span>Assertive Communication, Time Management, Teamwork, Proactivity, Organization[cite: 1].</span>
+            </div>
         </div>
     </section>
 
     <section>
-        <h3>Habilidades Administrativas y Herramientas</h3>
-        <div class="skills-container">
-            <div class="skill-item">Gestión Documental</div>
-            <div class="skill-item">Atención al Cliente</div>
-            <div class="skill-item">Microsoft Office (Word/Excel)</div>
-            <div class="skill-item">Organización de Archivo</div>
-            <div class="skill-item">Digitación de Datos</div>
-            <div class="skill-item">Comunicación Asertiva</div>
-            <div class="skill-item">Proactividad</div>
-            <div class="skill-item">Trabajo en Equipo</div>
+        <h3>Professional Experience</h3>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">Administrative Assistant</span>
+                <span class="exp-date">Feb 2026 - Apr 2026</span>
+            </div>
+            <div class="company-name">ASOMUDEM - Vistahermosa, Meta[cite: 1]</div>
+            <ul>
+                <li>Managed strict physical and digital archiving systems, ensuring rapid document retrieval and general office structure[cite: 1].</li>
+                <li>Provided high-quality front-desk customer service, addressing inquiries and routing public requests to corresponding areas[cite: 1].</li>
+                <li>Assisted in event logistics coordination and designed visual announcement media (flyers and informative graphics)[cite: 1].</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">Administrative Assistant / Receptionist</span>
+                <span class="exp-date">2024 - 2025</span>
+            </div>
+            <div class="company-name">Legal Office (Consultorio Jurídico) - Vistahermosa, Meta[cite: 1]</div>
+            <ul>
+                <li>Managed the front-desk greeting operations, user intake registration, and scheduled client appointments into tracking databases[cite: 1].</li>
+                <li>Controlled high-volume inbound telephone inquiries and sorted daily office correspondence[cite: 1].</li>
+                <li>Executed high-accuracy data entry tasks and provided overall administrative backup to senior legal associates[cite: 1].</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">Creative Assistant / Logistics Support</span>
+                <span class="exp-date">2023 - 2024</span>
+            </div>
+            <div class="company-name">BASADO (Marketing Agency) - Bogotá[cite: 1]</div>
+            <ul>
+                <li>Supported basic operations, scheduled creative team workflows, and organized administrative logistics for digital media production[cite: 1].</li>
+                <li>Assisted in internal document tracking and maintained updated catalogs using digital administrative tools[cite: 1].</li>
+            </ul>
         </div>
     </section>
 
     <section>
-        <h3>Idiomas y Formación Complementaria</h3>
-        <ul>
-            <li><strong>Español:</strong> Nativo</li>
-            <li><strong>Inglés:</strong> Básico (A2)</li>
-            <li><strong>Formación SENA (2023-2024):</strong> Cursos cortos en Habilidades Administrativas y Servicio al Cliente.</li>
-        </ul>
+        <h3>Education & Training</h3>
+        <div class="edu-flex">
+            <div>
+                <div class="edu-text"><strong>Associate Degree in Multimedia Design (Técnica en Diseño Multimedia)</strong></div>
+                <div class="edu-sub">SENA (Graduated 2023)[cite: 1]</div>
+            </div>
+        </div>
+        <div class="edu-flex" style="margin-bottom: 15px;">
+            <div>
+                <div class="edu-text"><strong>High School Diploma (Bachiller Académico)</strong></div>
+                <div class="edu-sub">Institución Educativa Los Centauros (2023)[cite: 1]</div>
+            </div>
+        </div>
+        <p style="font-size: 13.5px; padding-top: 10px; border-top: 1px solid #edf2f7;">
+            <strong>Additional Training:</strong> Certifications in Administrative Skills, Customer Service, and Digital Marketing (SENA 2023-2024)[cite: 1].
+            <br><br>
+            <strong>Languages:</strong> Spanish (Native) | <strong>English:</strong> Basic A2 (Actively developing for professional environments)[cite: 1].
+        </p>
     </section>
 
 </body>
